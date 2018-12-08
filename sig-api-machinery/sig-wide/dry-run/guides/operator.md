@@ -1,4 +1,0 @@
-
-# Dry Run
-
-## Operator Guide
