@@ -1,0 +1,16 @@
+authors:
+- jdumars
+title: Dry Run
+kep_number: null
+state: draft
+superseded_by: []
+last_updated: 2018-12-08T21:33:00.228855Z
+created: 2018-12-08T21:30:14.511597Z
+uuid: eb9eb511-d85b-4c6b-99a1-a56c4819ec60
+sections:
+- summary.md
+- motivation.md
+- README.md
+- README.md
+owning_sig: sig-api-machinery
+sig_wide: true
