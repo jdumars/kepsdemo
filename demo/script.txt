@@ -1,0 +1,54 @@
+export KEPROOT="/path-to-your-checked-out-enhancements-repo"
+
+# KEP Submitter:
+
+keps-cli init $KEPROOT/sig-api-machinery/dry-run
+
+ll $KEPROOT/sig-api-machinery/sig-wide/dry-run
+
+# Take a look at metadata:
+cat $KEPROOT/sig-api-machinery/sig-wide/dry-run/metadata.yaml
+
+# Put the KEP summary content you want reviewed here
+vi $KEPROOT/sig-api-machinery/sig-wide/dry-run/summary.md
+
+# Put the KEP detailed content you want reviewed here
+vi $KEPROOT/sig-api-machinery/sig-wide/dry-run/motivation.md
+
+# Artifacts are ready for initial SIG review, so you propose it:
+keps-cli propose $KEPROOT/sig-api-machinery/sig-wide/dry-run
+
+# PR is then created for the enhancements repo, and reviewed
+# If it is feasible (this can be a low bar because it's a draft)
+# the PR gets merged and is ready for SIG acceptance. This is then ready for
+# formal review of artifacts, and ideally done during a portion
+# of the SIG meeting
+
+# KEP DRAFT MERGED...
+
+# KEP REVIEWER goes over motivation and summary and can:
+# 1. defer/reject the KEP
+# 2. accept the KEP meaning it is ready for further refinement 
+# This is a low bar, because it is not ready to work yet
+# it just gives the SIG some assurance that what is presented is
+# feasible and reasonable
+
+keps-cli accept $KEPROOT/sig-api-machinery/sig-wide/dry-run
+
+# State gets changed to provisional:
+cat $KEPROOT/sig-api-machinery/sig-wide/dry-run/metadata.yaml
+
+# Provisional KEPs are refined, and more documents can be added
+# this also allows time to organize the work
+# getting plans figured out before implementable is important
+# becuase you don't want "unfunded" KEPs just sitting out there
+keps-cli plan $KEPROOT/sig-api-machinery/sig-wide/dry-run
+cat $KEPROOT/sig-api-machinery/sig-wide/dry-run/metadata.yaml
+
+
+# Once planned, and ready to work, a chair/TL marks the KEP
+# approved for implementation 
+keps-cli approve $KEPROOT/sig-api-machinery/sig-wide/dry-run
+
+# State changes to implementable:
+cat $KEPROOT/sig-api-machinery/sig-wide/dry-run/metadata.yaml
